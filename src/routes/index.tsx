@@ -1,13 +1,16 @@
-import './App.css';
-
+import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
 
 import viteLogo from '/vite.svg';
 
-import cloudflareLogo from './assets/Cloudflare_Logo.svg';
-import reactLogo from './assets/react.svg';
+import cloudflareLogo from '../assets/Cloudflare_Logo.svg';
+import reactLogo from '../assets/react.svg';
 
-function App() {
+export const Route = createFileRoute('/')({
+  component: Index,
+});
+
+function Index() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState('unknown');
 
@@ -67,5 +70,3 @@ function App() {
     </>
   );
 }
-
-export default App;
