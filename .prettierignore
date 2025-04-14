@@ -1,0 +1,10 @@
+**/dist
+**/public
+**/.drizzle
+**/.wrangler
+
+pnpm-lock.yaml
+
+# Generated files
+*.gen.ts
+worker-configuration.d.ts
