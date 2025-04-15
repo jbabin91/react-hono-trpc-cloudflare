@@ -10,5 +10,13 @@
     {
       "path": "./tsconfig.worker.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@worker/*": ["./worker/*"]
+    },
+    "types": ["./worker-configuration.d.ts", "vite/client"]
+  }
 }

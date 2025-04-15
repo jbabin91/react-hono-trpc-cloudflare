@@ -20,7 +20,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@worker/*": ["./worker/*"]
+    },
+
+    "types": ["./worker-configuration.d.ts", "vite/client"]
   },
   "include": ["src"]
 }

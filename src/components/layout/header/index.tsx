@@ -12,6 +12,9 @@ export function Header() {
         <Link className="[&.active]:font-bold" to="/about">
           About
         </Link>
+        <Link className="[&.active]:font-bold" to="/dashboard">
+          Dashboard
+        </Link>
       </nav>
       <div>
         <ModeToggle />

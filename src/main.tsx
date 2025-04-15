@@ -1,14 +1,14 @@
-import './styles/globals.css';
+import '@/styles/globals.css';
 
-import { createRouter, RouterProvider } from '@tanstack/react-router';
+import { RouterProvider } from '@tanstack/react-router';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { Providers } from './providers';
-import { routeTree } from './routeTree.gen';
+import { createRouter } from '@/lib/router';
+import { Providers } from '@/providers';
 
 // Create a new router instance
-const router = createRouter({ routeTree });
+const router = createRouter();
 
 // Register the router instance for type safety
 declare module '@tanstack/react-router' {
