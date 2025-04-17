@@ -5,10 +5,10 @@ import { z } from 'zod';
 export const exampleTableDataRouter = t.router({
   getTableData: t.procedure
     .input(z.object({ tableId: z.string() }))
-    .query(async ({ input }) => {
+    .query(({ input }) => {
       console.log('Fetching table data for table ID:', input.tableId);
       // Add delay of 2 seconds
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // await new Promise((resolve) => setTimeout(resolve, 1000));
 
       // 50% chance to throw an error
       if (Math.random() < 0.5) {
